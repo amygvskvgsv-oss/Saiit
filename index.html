@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08080c">
+<title>NEXUS | فروشگاه سایت‌های خاص</title>
+<style>
+:root{--bg:#08080c;--panel:#111118;--panel2:#171720;--text:#f5f5f7;--muted:#a3a3b2;--red:#ff244f;--violet:#8b5cf6;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 85% 5%,rgba(139,92,246,.16),transparent 35%),radial-gradient(ellipse at 10% 35%,rgba(255,36,79,.1),transparent 30%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:45px 45px;mask-image:linear-gradient(to bottom,black,transparent 80%);z-index:-1}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92%);margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid var(--line)}
+.logo{font-size:23px;font-weight:900;letter-spacing:3px}.logo span{color:var(--red)}
+.tag{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:30px;padding:9px 13px}
+.hero{padding:85px 0 55px;text-align:center;position:relative}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid rgba(255,36,79,.35);background:rgba(255,36,79,.08);border-radius:30px;color:#ff8ba2;font-size:12px}
+.dot{width:7px;height:7px;background:var(--red);border-radius:50%;box-shadow:0 0 14px var(--red);animation:pulse 1.7s infinite}
+h1{font-size:clamp(36px,7vw,76px);line-height:1.25;margin:24px 0 16px;font-weight:900;letter-spacing:-2px}
+h1 .glow{background:linear-gradient(90deg,#fff,#ff5474,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:650px;margin:0 auto;color:var(--muted);line-height:2;font-size:15px}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{border:1px solid var(--line);border-radius:12px;padding:13px 20px;font-weight:bold;font-size:14px;transition:.25s;cursor:pointer}
+.btn.primary{background:linear-gradient(110deg,#ff244f,#a72cff);border:0;box-shadow:0 8px 28px #ff244f25}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.13)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:40px 0 22px}
+.section-head h2{font-size:25px;margin:0 0 8px}.section-head p{color:var(--muted);font-size:13px;margin:0}
+.count{color:#ff8ba2;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{position:relative;overflow:hidden;background:linear-gradient(145deg,#171720,#0e0e14);border:1px solid var(--line);border-radius:18px;padding:22px;transition:.3s}
+.card:before{content:"";position:absolute;width:130px;height:130px;border-radius:50%;background:var(--accent);filter:blur(75px);opacity:.16;top:-60px;left:-30px;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--accent),transparent 35%);box-shadow:0 15px 45px #0008}
+.icon{width:48px;height:48px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent),transparent 87%);border:1px solid color-mix(in srgb,var(--accent),transparent 65%);border-radius:14px;font-size:23px;margin-bottom:20px}
+.card h3{font-size:18px;margin:0 0 10px}.card p{color:var(--muted);font-size:13px;line-height:1.9;min-height:48px;margin:0 0 18px}
+.card-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:15px}
+.price{font-size:12px;color:#d4d4df}.price strong{display:block;font-size:17px;color:white;margin-top:5px}
+.card .btn{font-size:12px;padding:10px 13px;background:#ffffff08}
+.notice{margin:26px 0 70px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:12px;line-height:2;background:#ffffff04}
+.contact{padding:60px 0 70px;border-top:1px solid var(--line);text-align:center;background:linear-gradient(180deg,transparent,#15101d80)}
+.contact h2{font-size:clamp(25px,5vw,42px);margin:0 0 13px}.contact>p{color:var(--muted);line-height:2;font-size:14px}
+.socials{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px auto 0;max-width:780px}
+.social{min-width:130px;padding:15px 19px;border:1px solid var(--line);background:#ffffff06;border-radius:12px;font-weight:bold;transition:.25s}
+.social:hover{transform:translateY(-4px);border-color:var(--red);background:#ff244f12}
+footer{border-top:1px solid var(--line);padding:22px 0;text-align:center;color:#737383;font-size:11px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:translateY(0)}
+@keyframes pulse{50%{opacity:.4;box-shadow:0 0 3px var(--red)}}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.hero{padding-top:60px}}
+@media(max-width:540px){.grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.hero p{font-size:14px}header{padding:18px 0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="logo" href="#">NEXUS<span>.</span></a><div class="tag">DARK WEB STUDIO · نسخه نمایشی</div></header>
+<main>
+<section class="hero">
+<div class="badge"><span class="dot"></span> دنیای سایت‌های خاص، از ایده تا اجرا</div>
+<h1>سایت معمولی نه؛<br><span class="glow">یه چیز خفن بساز.</span></h1>
+<p>مجموعه‌ای از طرح‌های خاص و قابل سفارش؛ از صفحات عاشقانه و شخصی تا کارت معرفی و صفحه‌های مناسبتی. طرح دلخواهت رو انتخاب کن و برای ثبت سفارش پیام بده.</p>
+<div class="actions"><a class="btn primary" href="#catalog">دیدن نمونه‌سایت‌ها ↓</a><a class="btn" href="#contact">ثبت سفارش ↗</a></div>
+</section>
+<section id="catalog">
+<div class="section-head"><div><h2>کتابخانه طرح‌ها</h2><p>یک طرح انتخاب کن؛ جزئیات و قیمت نهایی با هماهنگی مشخص می‌شود.</p></div><span class="count">۰۱ — ۰۹ / COLLECTION</span></div>
+<div class="grid">
+<article class="card reveal" style="--accent:#ff3864"><div class="icon">🖤</div><h3>صفحه عاشقانه</h3><p>نامه دیجیتال، تایپوگرافی احساسی، قلب‌های متحرک و افکت‌های لطیف.</p><div class="card-foot"><div class="price">قیمت<strong>توافقی</strong></div><a class="btn" href="#contact">سفارش طرح ↗</a></div></article>
+<article class="card reveal" style="--accent:#8b5cf6"><div class="icon">👤</div><h3>صفحه شخصی</h3><p>معرفی فردی با طراحی تیره، انیمیشن ورود و بخش لینک‌های مهم.</p><div class="card-foot"><div class="price">قیمت<strong>توافقی</strong></div><a class="btn" href="#contact">سفارش طرح ↗</a></div></article>
+<article class="card reveal" style="--accent:#00d5ff"><div class="icon">🎧</div><h3>صفحه موزیک</h3><p>فضای سینمایی برای معرفی آهنگ‌ها، پلی‌لیست‌ها و حال‌وهوای هنری.</p><div class="card-foot"><div class="price">قیمت<strong>توافقی</strong></div><a class="btn" href="#contact">سفارش طرح ↗</a></div></article>
+<article class="card reveal" style="--accent:#f59e0b"><div class="icon">🎂</div><h3>تولد و مناسبت</h3><p>صفحه اختصاصی برای تبریک، شمارش معکوس و نمایش پیام‌های ویژه.</p><div class="card-foot"><div class="price">قیمت<strong>توافقی</strong></div><a class="btn" href="#contact">سفارش طرح ↗</a></div></article>
+<article class="card reveal" style="--accent:#34d399"><div class="icon">📸</div><h3>گالری عکس</h3><p>چیدمان شیک و واکنش‌گرا برای عکس‌ها و مجموعه‌های تصویری.</p><div class="card-foot"><div class="price">قیمت<strong>توافقی</strong></div><a class="btn" href="#contact">سفارش طرح ↗</a></div></article>
+<article class="card reveal" style="--accent:#fb7185"><div class="icon">💌</div><h3>نامه و پیام مخفی</h3><p>یک تجربه تعاملی با دکمه بازکردن نامه و نمایش مرحله‌ای متن.</p><div class="card-foot"><div class="price">توافقی<strong>سفارشی</strong></div><a class="btn" href="#contact">سفارش طرح ↗</a></div></article>
+<article class="card reveal" style="--accent:#60a5fa"><div class="icon">🛍️</div><h3>معرفی محصول</h3><p>صفحه معرفی محصول یا خدمات با بخش ویژگی‌ها و دکمه تماس.</p><div class="card-foot"><div class="price">قیمت<strong>توافقی</strong></div><a class="btn" href="#contact">سفارش طرح ↗</a></div></article>
+<article class="card reveal" style="--accent:#c084fc"><div class="icon">🔗</div><h3>لینک‌بیو</h3><p>همه راه‌های ارتباطی در یک صفحه کوچک، سریع و جذاب.</p><div class="card-foot"><div class="price">قیمت<strong>توافقی</strong></div><a class="btn" href="#contact">سفارش طرح ↗</a></div></article>
+<article class="card reveal" style="--accent:#a3e635"><div class="icon">⚡</div><h3>طرح اختصاصی</h3><p>ایده خودت رو بگو تا یک نمونه متناسب با سلیقه‌ات طراحی شود.</p><div class="card-foot"><div class="price">قیمت<strong>توافقی</strong></div><a class="btn" href="#contact">سفارش طرح ↗</a></div></article>
+</div>
+<div class="notice reveal">توجه: این صفحه کاتالوگ نمایشی است. نمونه‌ها برای انتخاب سبک طراحی هستند؛ هزینه، امکانات و زمان تحویل باید پیش از ثبت سفارش مشخص شوند. سایت‌های ساده HTML/CSS/JavaScript را می‌توان بدون هزینه میزبانی روی سرویس‌های رایگان منتشر کرد؛ قابلیت‌هایی مثل ورود کاربران، پرداخت و پایگاه داده ممکن است به سرویس جداگانه نیاز داشته باشند.</div>
+</section>
+</main>
+</div>
+<section class="contact" id="contact"><div class="wrap">
+<div class="badge"><span class="dot"></span> READY WHEN YOU ARE</div>
+<h2>برای ثبت سایت به یکی از دکمه‌های زیر بزنید</h2>
+<p>پلتفرم دلخواهت رو انتخاب کن و برای هماهنگی سفارش پیام بده.</p>
+<div class="socials">
+<a class="social" href="https://shad.ir/The_First_God" target="_blank" rel="noopener noreferrer">شاد ↗</a>
+<a class="social" href="https://rubika.ir/Khas_Ali_26" target="_blank" rel="noopener noreferrer">روبیکا ↗</a>
+<a class="social" href="https://eitaa.com/NEXUS_I" target="_blank" rel="noopener noreferrer">ایتا ↗</a>
+<a class="social" href="https://t.me/NEXUS_AMG" target="_blank" rel="noopener noreferrer">تلگرام ↗</a>
+<a class="social" href="https://splus.ir/Amirpezhwak" target="_blank" rel="noopener noreferrer">سروش ↗</a>
+</div>
+</div></section>
+<footer>© NEXUS STUDIO — طراحی تاریک، ایده‌های متفاوت.</footer>
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){ entry.target.classList.add('show'); observer.unobserve(entry.target); }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+                                                                                                                                                                                                                                                                                                         </html>
